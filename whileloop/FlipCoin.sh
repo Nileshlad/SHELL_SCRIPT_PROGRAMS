@@ -12,10 +12,10 @@ do
 	case $flipCheck in
 		$head)
 			((headCounter++))
-		;;
+			;;
 		*)
 			((tailCounter++))
-		;;
+			;;
 	esac
 done
 
