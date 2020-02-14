@@ -5,19 +5,19 @@ read -p "Enter Start Point of Range: " start
 read -p "Enter End Point of Range: " end
 
 # TO PRINT PRIME NUMBERS FROM GIVEN RANGE
-for (( i=$start; i<=$end; i++ ))
+for (( index=$start; index<=$end; index++ ))
 do
 	count=1
-	for (( j=2; j<=$i; j++ ))
+	for (( indexOne=2; indexOne<=$index; indexOne++ ))
 	do
-		if [ $(( i % j )) -eq 0 ]
+		if [ $(( index % indexOne )) -eq 0 ]
 		then
 			count=$(( count + 1 ))
 		fi
 	done
 
-	if [[ $count -le 2 ]] && [[ $i -ne 1 ]]
+	if [[ $count -le 2 ]] && [[ $index -ne 1 ]]
 	then
-		echo -n $i " "
+		echo -n $index " "
 	fi
 done
