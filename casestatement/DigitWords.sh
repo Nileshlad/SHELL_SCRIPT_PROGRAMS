@@ -6,10 +6,10 @@ read -p "Enter the Number: " number
 # TO PRINT DIGIT IN WORDS
 case $number in
 	0)
-   	echo Zero
-	   ;;
+   	   	echo Zero
+	   	;;
 	1) 
-	   echo One
+	   	echo One
 		;;
 	2)
 		echo Two
