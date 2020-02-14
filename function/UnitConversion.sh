@@ -19,23 +19,23 @@ function conversion() {
 				echo $degf
 			else
 				echo "invalid"
-	    	fi
-	   	;;
+	    		fi
+	   		;;
 		
      
 	  	2)
-	     	if(( $degree>32 && $degree<212 ))
-		   then
-	    		degc=`echo "scale=2; ($degree-32)*5/9" |bc`
-		      echo $degc
-		   else
-		      echo "invalid"
-		   fi
-		   ;;
-      *)
-		     echo "invalid"
-         ;;
-esac
+		     	if(( $degree>32 && $degree<212 ))
+			then
+	    			degc=`echo "scale=2; ($degree-32)*5/9" |bc`
+				echo $degc
+		   	else
+		      		echo "invalid"
+		   	fi
+		   	;;
+      		*)
+		     	echo "invalid"
+         		;;
+	esac
 }
 
 #TO PRINT
