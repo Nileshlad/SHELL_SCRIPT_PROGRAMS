@@ -1,40 +1,40 @@
 #!/bin/bash
 
 #TAKE DICTIONARIES VALUE AT ZERO
-declare -A a
-	echo "${a[@]}"
+declare -A rollDie
+	echo "${rollDie[@]}"
 	result=1
-while [ $(( a[$result] )) -ne 10 ]
+while [ $(( rollDie[$result] )) -ne 10 ]
 do
 #TO RANDOM NUMBER
 	result=$((RANDOM%6+1))
-	a[$result]=$((a[$result]+1))
+	rollDie[$result]=$((rollDie[$result]+1))
 	echo "  "
-	echo "${a[@]}"
+	echo "${rollDie[@]}"
 	echo "  "
 done
 
 #PRINT KEY
-	echo "key" "${!a[@]}"
+	echo "key" "${!rollDie[@]}"
 
 #PRINT LENGTH
-length=${#a[@]}
+length=${#rollDie[@]}
 	echo "length:"$length
 
 #TO VARIABLE 
-minimumValue=$((a[1]))
+minimumValue=$((rollDie[1]))
 maximumValue=0
 
 for (( index=1; index<=length; index++ ))
 do
-	if [ $((a[$index])) -gt  $maximumValue ]
+	if [ $((rollDie[$index])) -gt  $maximumValue ]
 	then
-		maximum=$((a[$index]))
+		maximum=$((rollDie[$index]))
 	fi
 
-	if [ $((a[$index])) -lt  $minimumValue ]
+	if [ $((rollDie[$index])) -lt  $minimumValue ]
 	then
-		minimum=$((a[$index]))	
+		minimum=$((rollDie[$index]))	
 	fi
 done
 
